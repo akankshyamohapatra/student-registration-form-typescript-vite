@@ -1,0 +1,340 @@
+/* =========================================
+   DESIGN TOKENS
+========================================= */
+
+:root {
+  /* Colors */
+  --color-bg: #ffffff;
+  --color-bg-page: #f3f4f6;
+  --color-surface: #ffffff;
+
+  --color-text: #111827;
+  --color-text-muted: #6b7280;
+
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+
+  --color-border: #d1d5db;
+  --color-danger: #dc2626;
+
+  --color-info-bg: #eff6ff;
+  --color-info-border: #bfdbfe;
+
+  /* Typography */
+  --font-family-base: Arial, sans-serif;
+
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+
+  --font-weight-bold: 700;
+
+  --line-height-base: 1.5;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+
+  /* Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+  /* Borders */
+  --border-width-sm: 1px;
+  --border-width-md: 2px;
+
+  /* Layout */
+  --container-width-lg: 800px;
+  --container-width-md: 600px;
+}
+
+/* =========================================
+   THEME
+========================================= */
+
+.theme-dark {
+  --color-bg: #0f172a;
+  --color-bg-page: #020617;
+  --color-surface: #111827;
+
+  --color-text: #e5e7eb;
+  --color-text-muted: #94a3b8;
+
+  --color-border: #334155;
+}
+
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-base);
+
+  background: var(--color-bg-page);
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  min-height: 100vh;
+
+  color: var(--color-text);
+
+  line-height: var(--line-height-base);
+}
+
+/* =========================================
+   EXISTING CLASS NAMES
+========================================= */
+
+.container,
+.xxx {
+  background-color: var(--color-surface);
+
+  padding: var(--space-xl);
+
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-md);
+
+  width: 100%;
+}
+
+.container {
+  max-width: var(--container-width-lg);
+}
+
+.xxx {
+  width: 90%;
+  max-width: var(--container-width-md);
+}
+
+.text-box {
+  text-align: left;
+
+  color: var(--color-surface);
+
+  background-color: var(--color-primary);
+
+  margin-bottom: var(--space-lg);
+
+  border-radius: var(--radius-md);
+
+  border: var(--border-width-md);
+
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: var(--space-md);
+}
+
+label {
+  margin-bottom: var(--space-xs);
+
+  font-weight: var(--font-weight-bold);
+
+  color: var(--color-text);
+}
+
+input,
+select,
+textarea {
+  padding: var(--space-sm) var(--space-md);
+
+  border: var(--border-width-md) solid var(--color-border);
+
+  border-radius: var(--radius-md);
+
+  font-size: var(--font-size-md);
+
+  box-sizing: border-box;
+
+  width: 100%;
+
+  background: var(--color-surface);
+
+  color: var(--color-text);
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  width: 100%;
+
+  padding: var(--space-md);
+
+  background-color: var(--color-primary);
+
+  color: var(--color-surface);
+
+  border: none;
+
+  border-radius: var(--radius-md);
+
+  font-size: var(--font-size-lg);
+
+  cursor: pointer;
+
+  transition: background-color 0.3s ease;
+
+  margin-bottom: var(--space-xl);
+}
+
+button:hover {
+  background-color: var(--color-primary-hover);
+}
+
+hr {
+  border: 0;
+
+  height: var(--border-width-md);
+
+  background-color: var(--color-danger);
+
+  margin-bottom: var(--space-xl);
+}
+
+/* =========================================
+   LAYOUT
+========================================= */
+
+.row {
+  display: flex;
+
+  gap: var(--space-lg);
+}
+
+.col {
+  flex: 3;
+
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 600px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+/* =========================================
+   FORM TIPS
+========================================= */
+
+.form-tips {
+  background-color: var(--color-info-bg);
+
+  border: var(--border-width-md) solid var(--color-info-border);
+
+  border-radius: var(--radius-md);
+
+  padding: var(--space-lg);
+
+  margin-top: var(--space-xl);
+
+  color: var(--color-text);
+
+  box-shadow: var(--shadow-sm);
+}
+
+.form-tips h3 {
+  color: var(--color-primary);
+
+  margin-bottom: var(--space-sm);
+}
+
+.form-tips p {
+  margin-bottom: var(--space-sm);
+
+  font-size: var(--font-size-sm);
+
+  line-height: var(--line-height-base);
+}
+
+.form-tips b {
+  color: var(--color-text);
+}
+
+/* =========================================
+   ERROR MESSAGE
+========================================= */
+
+.error-message {
+  color: var(--color-danger);
+
+  font-size: var(--font-size-sm);
+
+  margin-top: var(--space-xs);
+
+  min-height: 1em;
+}
+
+/* =========================================
+   TABLE
+========================================= */
+
+.table-container {
+  width: 100%;
+
+  overflow-x: auto;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+table {
+  width: max-content;
+
+  border-collapse: collapse;
+
+  background-color: var(--color-surface);
+}
+
+th,
+td {
+  padding: var(--space-sm) var(--space-md);
+
+  border: var(--border-width-sm) solid var(--color-border);
+
+  white-space: nowrap;
+}
+
+/* =========================================
+   TABLE BUTTONS
+========================================= */
+
+table td button {
+  width: auto;
+
+  padding: var(--space-xs) var(--space-sm);
+
+  font-size: var(--font-size-sm);
+
+  margin: var(--space-xs);
+
+  border-radius: var(--radius-sm);
+
+  border: none;
+
+  cursor: pointer;
+}
