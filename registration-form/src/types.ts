@@ -1,5 +1,6 @@
 export interface Student{
 
+id:string;
 fname: string;
 lname: string;
 gender: string;

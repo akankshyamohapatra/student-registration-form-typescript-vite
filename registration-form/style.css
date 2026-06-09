@@ -5,7 +5,7 @@
 :root {
   /* Colors */
   --color-bg: #ffffff;
-  --color-bg-page: #f3f4f6;
+  --color-bg-page: #080809;
   --color-surface: #ffffff;
 
   --color-text: #111827;
@@ -54,6 +54,7 @@
   /* Layout */
   --container-width-lg: 800px;
   --container-width-md: 600px;
+ 
 }
 
 /* =========================================
@@ -96,6 +97,9 @@ body {
   color: var(--color-text);
 
   line-height: var(--line-height-base);
+
+  
+
 }
 
 /* =========================================
@@ -223,6 +227,12 @@ hr {
   display: flex;
 
   gap: var(--space-lg);
+}
+
+.row1{
+  display: flex;
+
+  flex-direction: row;
 }
 
 .col {
