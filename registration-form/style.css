@@ -36,7 +36,7 @@
   --space-sm: 0.5rem;
   --space-md: 1rem;
   --space-lg: 1.5rem;
-  --space-xl: 2rem;
+  --space-xl: 4rem;
 
   /* Radius */
   --radius-sm: 0.25rem;
@@ -78,12 +78,15 @@
 
 * {
   box-sizing: border-box;
+  /* outline: 3px solid orangered;
+  background-color: white; */
 }
 
 body {
   font-family: var(--font-family-base);
 
   background: var(--color-bg-page);
+  
 
   margin: 0;
   padding: 0;
@@ -98,7 +101,7 @@ body {
 
   line-height: var(--line-height-base);
 
-  
+  width: 100%;
 
 }
 
@@ -106,8 +109,7 @@ body {
    EXISTING CLASS NAMES
 ========================================= */
 
-.container,
-.xxx {
+.container{
   background-color: var(--color-surface);
 
   padding: var(--space-xl);
@@ -117,16 +119,17 @@ body {
   box-shadow: var(--shadow-md);
 
   width: 100%;
-}
 
-.container {
+  border: 3px solid blueviolet;
+
   max-width: var(--container-width-lg);
+
+  
 }
 
-.xxx {
-  width: 90%;
-  max-width: var(--container-width-md);
-}
+
+
+
 
 .text-box {
   text-align: left;
@@ -305,11 +308,17 @@ hr {
 ========================================= */
 
 .table-container {
-  width: 100%;
+  width: 700px;
+
+  height: 200px;
 
   overflow-x: auto;
 
   -webkit-overflow-scrolling: touch;
+
+ 
+
+  
 }
 
 table {
@@ -318,6 +327,10 @@ table {
   border-collapse: collapse;
 
   background-color: var(--color-surface);
+
+  
+
+
 }
 
 th,

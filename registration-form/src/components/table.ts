@@ -63,9 +63,8 @@ table.append(thead,tbody);
 container.appendChild(table);
 
 
-
-
 return container;
+
 
 }
 

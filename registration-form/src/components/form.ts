@@ -473,6 +473,9 @@ form.addEventListener("submit",(e) => {
 
 e.preventDefault();
 
+document.body.scrollTop = 0; // For Safari
+document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE andx
+
 const gpaValue= (document.getElementById("gpa") as HTMLInputElement).value;
 
 const student:Student ={
