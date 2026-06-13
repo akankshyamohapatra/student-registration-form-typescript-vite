@@ -19,6 +19,7 @@ export function renderTableHTML(): HTMLElement {
   const headerRow = document.createElement("tr");
 
   const headers = [
+    "S.no",
     "Firstname",
     "Lastname",
     "Gender",
@@ -36,47 +37,30 @@ export function renderTableHTML(): HTMLElement {
     "Zip",
   ];
 
+  headers.forEach((text) => {
+    const th = document.createElement("th");
 
-headers.forEach((text) =>{
+    th.textContent = text;
 
-const th=document.createElement("th");
+    headerRow.appendChild(th);
+  });
 
-th.textContent=text;
+  thead.appendChild(headerRow);
 
-headerRow.appendChild(th);
+  //tbody
+  const tbody = document.createElement("tbody");
+  tbody.id = "tableBody";
 
-})
+  table.append(thead, tbody);
 
+  container.appendChild(table);
 
-thead.appendChild(headerRow);
+ 
 
-
-//tbody
-const tbody= document.createElement("tbody");
-tbody.id="tableBody";
-
-
-
-table.append(thead,tbody);
-
-
-container.appendChild(table);
-
-
-return container;
-
-
+  return container;
 }
 
-
-
-
-
-
-
-
-
-  export function renderTable(): void {
+ export function renderTable(): void {
   const tableBody = document.getElementById("tableBody");
 
   if (!tableBody) {
@@ -85,8 +69,12 @@ return container;
 
   tableBody.replaceChildren();
 
-  state.students.forEach((student) => {
+  state.students.forEach((student, index) => {
     const row = document.createElement("tr");
+
+    //serial cell
+    const serialCell = document.createElement("td");
+    serialCell.textContent = String(index + 1);
 
     //first name
     const fnameCell = document.createElement("td");
@@ -170,6 +158,7 @@ return container;
     actionCell.append(editBtn, deleteBtn);
 
     row.append(
+      serialCell,
       fnameCell,
       lnameCell,
       genderCell,
@@ -189,16 +178,8 @@ return container;
     );
 
     tableBody.appendChild(row);
-
-    
   });
 }
-
-
-
-
-
-
 
 function handleEdit(id: string): void {
   const student = state.students.find((student) => student.id === id);
@@ -272,13 +253,10 @@ function handleEdit(id: string): void {
   pinInput.value = student.pin;
 }
 
-
-
-
-
-
 function handleDelete(id: string): void {
   state.students = state.students.filter((student) => student.id !== id);
+
+  saveStudents(state.students);
 
   renderTable();
 }

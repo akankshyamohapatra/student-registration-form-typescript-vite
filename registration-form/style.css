@@ -54,7 +54,6 @@
   /* Layout */
   --container-width-lg: 800px;
   --container-width-md: 600px;
- 
 }
 
 /* =========================================
@@ -86,7 +85,6 @@ body {
   font-family: var(--font-family-base);
 
   background: var(--color-bg-page);
-  
 
   margin: 0;
   padding: 0;
@@ -102,14 +100,13 @@ body {
   line-height: var(--line-height-base);
 
   width: 100%;
-
 }
 
 /* =========================================
    EXISTING CLASS NAMES
 ========================================= */
 
-.container{
+.container {
   background-color: var(--color-surface);
 
   padding: var(--space-xl);
@@ -123,13 +120,7 @@ body {
   border: 3px solid blueviolet;
 
   max-width: var(--container-width-lg);
-
-  
 }
-
-
-
-
 
 .text-box {
   text-align: left;
@@ -232,7 +223,7 @@ hr {
   gap: var(--space-lg);
 }
 
-.row1{
+.row1 {
   display: flex;
 
   flex-direction: row;
@@ -249,44 +240,6 @@ hr {
   .row {
     flex-direction: column;
   }
-}
-
-/* =========================================
-   FORM TIPS
-========================================= */
-
-.form-tips {
-  background-color: var(--color-info-bg);
-
-  border: var(--border-width-md) solid var(--color-info-border);
-
-  border-radius: var(--radius-md);
-
-  padding: var(--space-lg);
-
-  margin-top: var(--space-xl);
-
-  color: var(--color-text);
-
-  box-shadow: var(--shadow-sm);
-}
-
-.form-tips h3 {
-  color: var(--color-primary);
-
-  margin-bottom: var(--space-sm);
-}
-
-.form-tips p {
-  margin-bottom: var(--space-sm);
-
-  font-size: var(--font-size-sm);
-
-  line-height: var(--line-height-base);
-}
-
-.form-tips b {
-  color: var(--color-text);
 }
 
 /* =========================================
@@ -315,10 +268,6 @@ hr {
   overflow-x: auto;
 
   -webkit-overflow-scrolling: touch;
-
- 
-
-  
 }
 
 table {
@@ -327,10 +276,6 @@ table {
   border-collapse: collapse;
 
   background-color: var(--color-surface);
-
-  
-
-
 }
 
 th,
